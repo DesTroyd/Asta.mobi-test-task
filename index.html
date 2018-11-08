@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Test task</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+    <div id="app" class="appWrapper">
+      <div class="flex-container">
+        <div v-for="(coin, index) in coins" class="coin-block" v-on:click="selectCoin(index)">
+          <div style="height: 185px;">
+            <img v-bind:src="coin.image">
+            <div class=" coin-name">{{coin.name}}</div>
+          </div>
+          <div class="coin-price">
+            <strong>{{coin.valute[0]}}:</strong> {{coin.price[0]}} <br>
+            <strong>{{coin.valute[1]}}:</strong> {{coin.price[1]}} <br>
+            <strong>{{coin.valute[2]}}:</strong> {{coin.price[2]}}
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="selected-coin">Selected coin: {{activeCoin}}</div><br>
+      <div class="input-container">
+        <span class="input-vol">Volume:</span><input type="text" name="coin-volume" v-model="coinCurrentValue"><br>
+      </div>
+      <div class="button-select-block">
+        <button v-on:click="currentValute = 'USD'">USD</button>
+        <button v-on:click="currentValute = 'UAH'">UAH</button>
+        <button v-on:click="currentValute = 'RUB'">RUB</button>
+      </div>
+      <div class="reult">
+        <br><strong>{{coinCurrentValue}}</strong> <strong>{{activeCoin}}</strong> will be <strong>{{amount}}</strong> in <strong>{{currentValute}}</strong>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="app.js"> </script>
+  </body>
+
+</html>

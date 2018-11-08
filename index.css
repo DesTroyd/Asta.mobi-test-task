@@ -1,0 +1,97 @@
+body {
+  font-size: 32px;
+  margin: 0;
+  padding-left: 30px;
+  background-color: #06162e;
+}
+
+.appWrapper {
+
+  align-items: center;
+  align-content: space-between;
+}
+
+.coin-block {
+  display: inline-flex;
+  background-color: #102f52;
+  margin: 20px;
+  padding: 20px 20px 30px 20px;
+
+}
+
+.coin-block:hover {
+  background-color: #153d6a;
+}
+
+.coin-block:active {
+  background-color: #113155;
+}
+
+.coin-name{
+    color:#86c551
+  }
+
+.coin-price{
+    color:#5594dd;
+    margin-left: 20px;
+}
+
+.selected-coin {
+text-align: center;
+color: #5594dd;
+}
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+}
+
+.input-container{
+  text-align: center;
+  color:#86c551;
+  margin: 0px auto;
+}
+
+.button-select-block{
+  text-align: center;
+}
+
+.reult{
+  color:#86c551;
+  text-align: center;
+}
+
+input{
+  background-color: #06162e;
+  border: 1px solid #5594dd;
+  border-radius: 3px;
+  width: 400px;
+  height: 25px;
+  margin-left: 5px;
+  margin-right: 90px;
+  color: #5594dd;
+  padding-left: 10px;
+}
+
+input[type=text]:focus{
+  outline: none
+}
+
+.input-vol{
+  font-size: 24px;
+}
+
+button{
+  background-color: #102f52;
+  color: #86c551;
+  border: 2px solid #102f52;
+  height: 30px;
+  margin-left: 5px;
+}
+
+button:focus{
+  outline: none;
+  background-color: #86c551;
+  color: #102f52;
+  border: 2px solid #86c551;
+}
